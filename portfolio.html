@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+            <style>
+        * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Global Styles */
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+	background-color: white;
+	color: rgb(0, 0, 0);
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5px auto;
+	padding: 0 20px;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #40b736;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+}
+
+.nav-links li {
+	margin-right: 20px;
+}
+
+.nav-links a {
+	color: rgb(0, 0, 0);
+	padding: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	background-color: #40b736;
+	border-radius: 4px;
+	color: white;
+}
+
+/* About Section */
+
+.about {
+	background: rgb(224, 251, 222);
+	background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+	padding: 100px 0 20px 0;
+	text-align: center;
+}
+
+.about h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.about p {
+	font-size: 1rem;
+	color: #323030;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.about-info {
+	margin: 2rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+}
+
+.about-img {
+	width: 20rem;
+	height: 20rem;
+
+}
+
+.about-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: contain;
+}
+
+.about-info p {
+	font-size: 1.3rem;
+	margin: 0 2rem;
+	text-align: justify;
+}
+
+button {
+	border: none;
+	outline: 0;
+	padding: 10px;
+	margin: 2rem;
+	font-size: 1rem;
+	color: white;
+	background-color: #40b736;
+	text-align: center;
+	cursor: pointer;
+	width: 15rem;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #1f9405;
+}
+
+/* Team Section */
+
+.team {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.team h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.team-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	width: 18rem;
+	height: 25rem;
+	margin-top: 10px;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	width: 18rem;
+	height: 12rem;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.card-info button {
+	margin: 2rem 1rem;
+}
+
+.card-name {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.card-role {
+	font-size: 1rem;
+	color: #888;
+	margin: 5px 0;
+}
+
+.card-email {
+	font-size: 1rem;
+	color: #555;
+}
+
+/* Footer */
+footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+	nav {
+		display: block;
+	}
+
+	.logo {
+		text-align: center;
+	}
+
+	.nav-links {
+		margin-top: 1rem;
+		justify-content: space-between;
+	}
+
+	.nav-links li {
+		margin-right: 0;
+	}
+
+	.about h1 {
+		font-size: 2rem;
+	}
+
+	.about p {
+		font-size: 0.9rem;
+	}
+
+	.about-info {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-img {
+		width: 60%;
+		height: 60%;
+		margin-bottom: 1rem;
+	}
+
+	.about-info p {
+		margin: 1rem 2rem;
+	}
+
+	.about-info button {
+		margin: 1rem 2rem;
+		width: 10rem;
+	}
+
+	.team {
+		margin: 0 1rem;
+	}
+}
+            		      li{
+        float: left;
+      	padding:20px;
+		margin: 0px;
+		text-decoration: none;
+      }
+			  ul{
+				  list-style-type: none;
+				  margin: 0px;
+				  padding: 0px;
+				  background-color: white;
+				  overflow: hidden;
+				  display: block;
+				  text-decoration: none;
+			  }
+li a:hover{
+	color: dimgray;
+}
+li a{
+	text-decoration: none;
+}
+
+
+    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Project Simbaa</title>
+</head>
+
+<body>
+	<!--Header(start)-->
+        <ul class="links">
+          <li><a href="page1.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+	<!--Header(end)-->
+
+	<!--Home(start)-->
+	<table id="home" border="1" width="100%"
+		cellpadding="20" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td align="center" valign="middle">
+							<h3>
+								<font face="Times New Roman"
+									size="6" color="#ffffff">
+									Hi Simbaas!
+								</font>
+							</h3>
+
+							<h2>
+								<font face="Verdana" size="6"
+									color="#4CAF50">
+									<!-- Freelance Programmer -->
+								</font>
+							</h2>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Home(end)-->
+
+
+	<!--About(start)-->
+	<table id="about" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="#4CAF50">
+								About Me
+							</font>
+							<hr color="#4CAF50" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td width="40%">
+							<img src="img.png">
+						</td>
+
+						<td width="60%">
+							<font face="Verdana" size="4"
+								color="white">
+								Thanks for your interest, here
+								is a quick story of me and this
+								website.
+								<hr color="black">
+								Sherlene Wanyiki is an IIT Roorkee alumnus
+								and founder of Project SImbaa. She
+								loves to solve programming problems
+								in most efficient ways. Apart from
+								Project Simbaa, she has worked with
+								DE Shaw and Co. as a software
+								developer and JIIT Noida as an
+								assistant professor.
+								<hr color="black">
+
+								I do my work mainly in C-Language,
+								C++ and JAVA. C++ and Data Structure
+								and Algorithm are my stronger section.
+								Besides these I know Web Development,
+								LINUX and database as well.
+								<hr color="black">
+
+								This website is basically one of my
+								Web Development project which is
+								built using HTML only.
+								Here one can also find ideas for
+								projects in different languages.
+
+								Thanks again for reading this,
+								because of people like you, it
+								exists and prospers!
+								<hr color="black">
+								Cheers,
+								<br>
+								<b>Project Simbaa.</b>
+							</font>
+						</td>
+					</tr>
+				</table>
+				<hr color="black">
+				<hr color="black">
+				<hr color="black">
+			</td>
+		</tr>
+	</table>
+	<!--About(end)-->
+
+
+	<!--Projects(start)-->
+	<table id="projects" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Projects
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td height="10">
+							<font face="Times New Roman"
+								size="5" color="black">
+								<ul>
+									<li>
+										BMI Calculator
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Calculator
+										<a href="#"
+										style="text-decoration:none"
+											color="#c2c0c3">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Calendar
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										ChatBot
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Contact Saver
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Daily Quiz
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Emplyoyee Record System
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Guess the Number-Game
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Random Password Generator
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Stone Paper Scissor
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Tic Tac Toe
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Tic Tac Toe(GUI)
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										ToDo App
+										<a href="#"
+										style="text-decoration:none">
+											➲ </a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Travel Management System
+										<a href="#" style=
+											"text-decoration:none"> ➲
+										</a>
+									</li>
+								</ul>
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+							</font>
+						</td>
+
+						<td width="45%">
+							<img src="img.png"
+								alt="Project" width="75%">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Projects(end)-->
+
+	<!--Achievement(start)-->
+	<table id="achievements" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle">
+							<font face="Verdana" size="7" color="#4CAF50">
+								Achievements
+								<hr color="#4CAF50" width="100">
+							</font>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<font face="Verdana" size="4" color="white">
+								<ul>
+									<li>
+										<b>Intern at GeeksforGeeks.</b>
+										<ul>
+											<li>
+												December,2020 - Present.
+											</li>
+											<li>
+												Write technical articles
+												on programming related topics.
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Microsoft Learn Student Ambassador.</b>
+										<ul>
+											<li>
+												August,2020 - Present.
+											</li>
+											<li>
+												Conducted events and workshops on
+												different technologies.
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Mentored HackTX.</b>
+										<ul>
+											<li>
+												October,2020.
+											</li>
+											<li>
+												Selected from Microsoft as Student
+												ambassador where I mentored students
+												in their projects.
+											</li>
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+										</ul>
+									</li>
+
+								</ul>
+
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Achievement(end)-->
+
+
+	<!--Contact(start)-->
+	<table id="contact" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Contact
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+<td align="center" valign="top">
+						</td>
+	<!--Contact(end)-->
+
+
+	<!--Footer1(start)-->
+	<table id="footer" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td width="13%" valign="top">
+							<b>LinkedIn</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>GitHub</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>HackerRank</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Project Simbaa</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Twitter</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Instagram</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Email</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Website</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Footer1(end)-->
+
+
+	<!--Footer2(start)-->
+	<table id="footer" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td width="80%" valign="top">
+							<font face="Verdana"
+								color="#4CAF50" size="5">
+								©Copyright 2024 by Project Simbaa.
+								All rights reserved.
+							</font>
+						</td>
+
+						<td width="10%">
+							<font face="arial" color="black" size="5">
+								<a href="#header" style="text-decoration:none">
+									<font face="Verdana" color="#4CAF50" size="6">
+										<b>TOP</b>
+									</font>
+								</a>
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Footer2(end)-->
+
+</body>
+
+</html>
